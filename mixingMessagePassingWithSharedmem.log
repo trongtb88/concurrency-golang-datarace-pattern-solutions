@@ -1,0 +1,20 @@
+==================
+WARNING: DATA RACE
+Write at 0x00c0000a6080 by main goroutine:
+  main.(*responseFutureImpl).Wait()
+      /Users/trongtran/Downloads/gorace-examples/mixingMessagePassingWithSharedmem.go:56 +0x13c
+  main.main()
+      /Users/trongtran/Downloads/gorace-examples/mixingMessagePassingWithSharedmem.go:81 +0x13e
+
+Previous write at 0x00c0000a6080 by goroutine 6:
+  main.(*responseFutureImpl).Start.func1()
+      /Users/trongtran/Downloads/gorace-examples/mixingMessagePassingWithSharedmem.go:42 +0xa4
+
+Goroutine 6 (running) created at:
+  main.(*responseFutureImpl).Start()
+      /Users/trongtran/Downloads/gorace-examples/mixingMessagePassingWithSharedmem.go:39 +0x8e
+  main.main()
+      /Users/trongtran/Downloads/gorace-examples/mixingMessagePassingWithSharedmem.go:80 +0x12a
+==================
+Found 1 data race(s)
+exit status 66

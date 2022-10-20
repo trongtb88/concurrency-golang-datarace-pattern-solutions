@@ -1,0 +1,24 @@
+==================
+WARNING: DATA RACE
+Write at 0x00c0000ce000 by goroutine 6:
+  main.processAll.func1()
+      /Users/trongtran/Downloads/gorace-examples/racesInSlices.go:17 +0xf6
+  main.processAll.func2()
+      /Users/trongtran/Downloads/gorace-examples/racesInSlices.go:26 +0x4d
+  main.processAll.func3()
+      /Users/trongtran/Downloads/gorace-examples/racesInSlices.go:28 +0x8f
+
+Previous read at 0x00c0000ce000 by main goroutine:
+  main.processAll()
+      /Users/trongtran/Downloads/gorace-examples/racesInSlices.go:28 +0x2e4
+  main.main()
+      /Users/trongtran/Downloads/gorace-examples/racesInSlices.go:40 +0x12a
+
+Goroutine 6 (running) created at:
+  main.processAll()
+      /Users/trongtran/Downloads/gorace-examples/racesInSlices.go:24 +0x3f5
+  main.main()
+      /Users/trongtran/Downloads/gorace-examples/racesInSlices.go:40 +0x12a
+==================
+Found 1 data race(s)
+exit status 66
