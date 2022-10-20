@@ -3,7 +3,7 @@ Concurrency in golang datarace pattern issues and solutions
 
 # Commons issues at concurrency golang that causes data race
 ## You will see 2 code block at go file, 1 is ORIGINAL issue, 1 is solution to fix it
-
+```
 // ORIGINAL
 // func main() {
 // 	jobs := [2]int{1, 2}
@@ -23,6 +23,7 @@ func main() {
 		}(index)
 	}
 }
+```
 
 ### List of commmon issue cause data race :  
 
