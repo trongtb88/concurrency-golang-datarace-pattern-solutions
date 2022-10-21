@@ -1,5 +1,10 @@
 # Commons data race pattern at concurrency golang and solutions
 ## You will see 2 code block at go file, 1 is ORIGINAL issue, 1 is solution to fix it
+### If you want to test and see data race :
+	#### Uncomment at ORIGINAL block
+	#### Commant at FIX block.
+	#### Open terminal, ./run.sh
+	
 ```
 // ORIGINAL
 // func main() {
