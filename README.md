@@ -1,6 +1,6 @@
 # Commons data race pattern at concurrency golang and solutions
-## You will see 2 code block at go file, 1 is ORIGINAL issue, 1 is solution to fix it
-### If you want to test and see data race :
+### You will see 2 code block at go file, 1 is ORIGINAL issue, 1 is solution to fix it
+### If you want to test and see data race at log file, follow below steps:
 	1. Uncomment at ORIGINAL block
 	2. Commant at FIX block.
 	3. Open terminal, ./run.sh
