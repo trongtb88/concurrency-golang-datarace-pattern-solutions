@@ -1,7 +1,4 @@
-# concurrency-golang-datarace-pattern-solutions
-Concurrency in golang datarace pattern issues and solutions
-
-# Commons issues at concurrency golang that causes data race
+# Commons data race pattern at concurrency golang and solutions
 ## You will see 2 code block at go file, 1 is ORIGINAL issue, 1 is solution to fix it
 ```
 // ORIGINAL
