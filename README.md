@@ -99,19 +99,34 @@ You can open up the corresponding `.go` file to see the source code of the data 
 
 As an example, `loopIndexVariableCapture.log` might look like this.
 ```
-==================
 WARNING: DATA RACE
-Read at 0x00c0000a2000 by goroutine 6:
-  main.main.func1()
-      /Users/mc29/scratch/gorace-examples/loopIndexVariableCapture.go:11 +0x38
+Write at 0x00c00011c000 by goroutine 7:
+  runtime.mapassign_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:203 +0x0
+  main.processOrders.func1()
+      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:25 +0x105
+  main.processOrders.func2()
+      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:28 +0x58
 
-Previous write at 0x00c0000a2000 by main goroutine:
-  main.main()
-      /Users/mc29/scratch/gorace-examples/loopIndexVariableCapture.go:9 +0x5a
+Previous write at 0x00c00011c000 by goroutine 6:
+  runtime.mapassign_faststr()
+      /usr/local/go/src/runtime/map_faststr.go:203 +0x0
+  main.processOrders.func1()
+      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:25 +0x105
+  main.processOrders.func2()
+      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:28 +0x58
 
-Goroutine 6 (running) created at:
+Goroutine 7 (running) created at:
+  main.processOrders()
+      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:21 +0x22d
   main.main()
-      /Users/mc29/scratch/gorace-examples/loopIndexVariableCapture.go:10 +0x84
+      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:36 +0x65
+
+Goroutine 6 (finished) created at:
+  main.processOrders()
+      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:21 +0x22d
+  main.main()
+      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:36 +0x65
 ==================
 Found 1 data race(s)
 exit status 66
@@ -123,7 +138,8 @@ The contents of the source file `loopIndexVariableCapture.go` with line annotati
   3 func processJob(job int) {
   4         // do something
   5 }
-  6 
+  
+  6 //ORIGINAL
   7 func main() {
   8         jobs := [2]int{1, 2}
   9         for job := range jobs {
