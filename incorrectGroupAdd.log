@@ -1,16 +1,1 @@
-==================
-WARNING: DATA RACE
-Read at 0x00c00009a018 by goroutine 6:
-  main.main.func1()
-      /Users/trongtran/Downloads/gorace-examples/incorrectGroupAdd.go:10 +0x4e
-
-Previous write at 0x00c00009a018 by main goroutine:
-  main.main()
-      /Users/trongtran/Downloads/gorace-examples/incorrectGroupAdd.go:14 +0x144
-
-Goroutine 6 (running) created at:
-  main.main()
-      /Users/trongtran/Downloads/gorace-examples/incorrectGroupAdd.go:8 +0x11a
-==================
-Found 1 data race(s)
-exit status 66
+2

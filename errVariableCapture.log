@@ -1,3 +1,0 @@
-# command-line-arguments
-./errVariableCapture.go:36:6: main redeclared in this block
-	./errVariableCapture.go:16:6: other declaration of main

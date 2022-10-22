@@ -13,6 +13,8 @@ func baz() (string, error) {
 }
 
 // ORIGINAL
+// re-use the err insdie the go routine will cause data race
+/*
 func main() {
 	_, err := foo()
 	if err != nil {
@@ -31,6 +33,7 @@ func main() {
 		// do something
 	}
 }
+*/
 
 // FIX
 func main() {

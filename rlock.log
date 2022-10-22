@@ -1,0 +1,24 @@
+==================
+WARNING: DATA RACE
+Read at 0x00c00009a018 by goroutine 7:
+  main.(*HealthGate).updateGate()
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/rlock.go:16 +0x7b
+  main.main.func2()
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/rlock.go:31 +0x39
+
+Previous write at 0x00c00009a018 by goroutine 6:
+  main.(*HealthGate).updateGate()
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/rlock.go:18 +0x85
+  main.main.func1()
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/rlock.go:27 +0x39
+
+Goroutine 7 (running) created at:
+  main.main()
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/rlock.go:30 +0x1da
+
+Goroutine 6 (running) created at:
+  main.main()
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/rlock.go:26 +0x136
+==================
+Found 1 data race(s)
+exit status 66

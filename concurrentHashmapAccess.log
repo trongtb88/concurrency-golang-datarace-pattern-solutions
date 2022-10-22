@@ -1,32 +1,32 @@
 ==================
 WARNING: DATA RACE
-Write at 0x00c00011c000 by goroutine 7:
+Write at 0x00c00009a000 by goroutine 7:
   runtime.mapassign_faststr()
       /usr/local/go/src/runtime/map_faststr.go:203 +0x0
   main.processOrders.func1()
-      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:25 +0x105
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/concurrentHashmapAccess.go:25 +0x105
   main.processOrders.func2()
-      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:28 +0x58
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/concurrentHashmapAccess.go:28 +0x58
 
-Previous write at 0x00c00011c000 by goroutine 6:
+Previous write at 0x00c00009a000 by goroutine 6:
   runtime.mapassign_faststr()
       /usr/local/go/src/runtime/map_faststr.go:203 +0x0
   main.processOrders.func1()
-      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:25 +0x105
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/concurrentHashmapAccess.go:25 +0x105
   main.processOrders.func2()
-      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:28 +0x58
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/concurrentHashmapAccess.go:28 +0x58
 
 Goroutine 7 (running) created at:
   main.processOrders()
-      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:21 +0x22d
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/concurrentHashmapAccess.go:21 +0x22d
   main.main()
-      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:36 +0x65
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/concurrentHashmapAccess.go:36 +0x65
 
 Goroutine 6 (finished) created at:
   main.processOrders()
-      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:21 +0x22d
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/concurrentHashmapAccess.go:21 +0x22d
   main.main()
-      /Users/trongtran/Downloads/gorace-examples/concurrentHashmapAccess.go:36 +0x65
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/concurrentHashmapAccess.go:36 +0x65
 ==================
 Found 1 data race(s)
 exit status 66

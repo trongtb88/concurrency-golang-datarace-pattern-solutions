@@ -1,22 +1,22 @@
 ==================
 WARNING: DATA RACE
-Read at 0x00c000118000 by goroutine 6:
+Read at 0x00c0000a2000 by goroutine 6:
   main.redeem.func2()
-      /Users/trongtran/Downloads/gorace-examples/namedReturnVariableCaptureWithDefer.go:23 +0x30
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/namedReturnVariableCaptureWithDefer.go:23 +0x30
 
-Previous write at 0x00c000118000 by main goroutine:
+Previous write at 0x00c0000a2000 by main goroutine:
   main.redeem.func1()
-      /Users/trongtran/Downloads/gorace-examples/namedReturnVariableCaptureWithDefer.go:17 +0x6e
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/namedReturnVariableCaptureWithDefer.go:17 +0x6e
   runtime.deferreturn()
       /usr/local/go/src/runtime/panic.go:436 +0x32
   main.main()
-      /Users/trongtran/Downloads/gorace-examples/namedReturnVariableCaptureWithDefer.go:29 +0x24
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/namedReturnVariableCaptureWithDefer.go:29 +0x24
 
 Goroutine 6 (running) created at:
   main.redeem()
-      /Users/trongtran/Downloads/gorace-examples/namedReturnVariableCaptureWithDefer.go:22 +0x14e
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/namedReturnVariableCaptureWithDefer.go:22 +0x14e
   main.main()
-      /Users/trongtran/Downloads/gorace-examples/namedReturnVariableCaptureWithDefer.go:29 +0x24
+      /Users/trongtran/FSMK/concurrency-golang-datarace-pattern-solutions/namedReturnVariableCaptureWithDefer.go:29 +0x24
 ==================
 Found 1 data race(s)
 exit status 66
